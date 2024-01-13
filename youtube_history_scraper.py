@@ -53,8 +53,9 @@ def scrape_history(username,password,scan_length,file_name):
 
     #prints out links to a file
     file = open(file_name + ".txt","w")
-    for link in links:
+    for link in links[:-1]:
         file.write(link+"\n")
+    file.write(links[-1])
     file.close()    
     
 
