@@ -3,9 +3,17 @@ Logs you into google ,navigates to the youtube history page, scrapes youtube his
 
 Installation guide
 Run the following in the terminal
+
+
 pip install tk
+
+
 pip install selenium
+
+
 pip install beautifulsoup4
+
+
 pip install tk
 
 
