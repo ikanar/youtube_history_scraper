@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
 from selenium.webdriver.common.keys import Keys
 import tkinter as tk
-
+import json
 
 
 
@@ -20,7 +20,6 @@ def scrape_history(username,password,scan_length,file_name):
     scan_length_int = int(scan_length)
 
     
-
     #handles login to google account
     #sleeps inbetween each stage to allow time to load
     driver.find_element(By.XPATH, '//*[@id="identifierId"]').send_keys(username)
@@ -39,29 +38,36 @@ def scrape_history(username,password,scan_length,file_name):
         sleep(5)
         scan_length_int = scan_length_int - 1
     
-    elements = driver.find_elements(By.XPATH,'//*[@id="thumbnail"]')
+    elements = driver.find_elements(By.XPATH,'//*[@id="video-title"]')
 
     links = []
+
+    history = {}
 
     #loads links from html elements into a list 
     #filters out the "None" elements
     for element in elements:
+        title = element.get_attribute("title")
         e = element.get_attribute("href")
         if e != None:
-            links.append(e)
+            history[title] = e
         
 
     #prints out links to a file
     file = open(file_name + ".txt","w")
-    for link in links[:-1]:
-        file.write(link+"\n")
-    file.write(links[-1])
-    file.close()    
+    file.write(json.dumps(history))
     
 
     driver.close()
 
     return links
+
+
+
+
+
+
+
 
 
 def Search():
@@ -71,7 +77,6 @@ def Search():
     scan_length = scan_length_entry.get()
     file_name = file_name_entry.get()
     scrape_history(email,password,scan_length,file_name)
-
 
 
 if __name__ == '__main__':
@@ -117,3 +122,5 @@ if __name__ == '__main__':
     
     
     root.mainloop()
+
+
