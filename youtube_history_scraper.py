@@ -40,8 +40,6 @@ def scrape_history(username,password,scan_length,file_name):
     
     elements = driver.find_elements(By.XPATH,'//*[@id="video-title"]')
 
-    links = []
-
     history = {}
 
     #loads links from html elements into a list 
@@ -60,7 +58,7 @@ def scrape_history(username,password,scan_length,file_name):
 
     driver.close()
 
-    return links
+    return history
 
 
 
