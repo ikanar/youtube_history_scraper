@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 from selenium.webdriver.common.keys import Keys
 import tkinter as tk
 import json
+from pytube import extract
 
 
 
@@ -48,12 +49,14 @@ def scrape_history(username,password,scan_length,file_name):
         title = element.get_attribute("title")
         e = element.get_attribute("href")
         if e != None:
-            history[title] = e
+            id = extract.video_id(e)
+            history[title] = [e,id]
         
 
     #prints out links to a file
-    file = open(file_name + ".txt","w")
-    file.write(json.dumps(history))
+    if file_name != 'none' and file_name != '':
+        file = open(file_name + ".txt","w")
+        file.write(json.dumps(history))
     
 
     driver.close()
