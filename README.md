@@ -5,16 +5,10 @@ Installation guide
 Run the following in the terminal:
 
 
-pip install tk
-
-
-pip install selenium
-
-
-pip install beautifulsoup4
-
-
-pip install tk
+- pip install tk
+- pip install selenium
+- pip install beautifulsoup4
+- pip install tk
 
 
 How to use:
