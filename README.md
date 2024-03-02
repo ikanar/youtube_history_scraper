@@ -1,5 +1,8 @@
-Youtube History Scraper
-Logs you into google ,navigates to the youtube history page, scrapes youtube history, prints the links into a convenient file.
+**Youtube History Scraper**  
+Logs you into google. 
+navigates to the youtube history page. 
+scrapes youtube history. 
+prints the links into a convenient file.
 
 Installation guide
 Run the following in the terminal:
