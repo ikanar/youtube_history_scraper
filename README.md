@@ -4,7 +4,7 @@ navigates to the youtube history page.
 scrapes youtube history. 
 prints the links into a convenient file.
 
-Installation guide
+**Installation guide**
 Run the following in the terminal:
 
 
@@ -14,7 +14,7 @@ Run the following in the terminal:
 - pip install tk
 
 
-How to use:
+**How to use:**
 After installing, simply run the program and fill out the fields in the GUI. 
 
 
