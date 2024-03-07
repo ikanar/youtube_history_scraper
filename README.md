@@ -23,4 +23,4 @@ After installing, simply run the program and fill out the fields in the GUI.
 
 
 The history file will be saved to whatever directory the python file is in.
-You can simply copy and paste the function scrape_history into your program if you dont need the gui. 
+You can simply copy and paste the function **scrape_history** into your program if you dont need the gui. 
