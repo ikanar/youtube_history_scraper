@@ -1,7 +1,6 @@
 import undetected_chromedriver as uc
 from time import sleep
 from selenium.webdriver.common.by import By
-from bs4 import BeautifulSoup
 from selenium.webdriver.common.keys import Keys
 import tkinter as tk
 import json
