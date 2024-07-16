@@ -7,8 +7,6 @@ import json
 from pytube import extract
 
 
-
-
 #REQUIRES YOU TO USE YOUR PHONE TO AUTHENTICATE THE USER
 #GOOGLE WILL SEND YOU AN ALERT AND YOU HAVE 10 SECONDS TO CLICK YES OR THE PROGRAM WILL FAIL
 #PROGRAM ALSO WILL THROW ERROR AT THE END THIS IS A KNOWN BUG WITH UNDETECTED CHROME DRIVER AND IT IS WORKING AS INTENDED FOR NOW.
@@ -61,13 +59,6 @@ def scrape_history(username,password,scan_length,file_name):
     driver.close()
 
     return history
-
-
-
-
-
-
-
 
 
 def Search():
