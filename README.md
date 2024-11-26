@@ -12,6 +12,7 @@ Run the following in the terminal:
 - pip install selenium
 - pip install beautifulsoup4
 - pip install tk
+- pip install undetected-chromedriver
 
 
 **How to use:**
