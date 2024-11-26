@@ -13,6 +13,7 @@ Run the following in the terminal:
 - pip install beautifulsoup4
 - pip install tk
 - pip install undetected-chromedriver
+- pip install pytube
 
 
 **How to use:**
